@@ -1,0 +1,117 @@
+/* Fonttiasetukset, taustakuva */
+html  {
+  background-image: url('img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  font-family: 'Titillium Web', sans-serif;
+  color:black;
+}
+/* Padding/borderin sisällytys elementtiin */
+* {
+  box-sizing: border-box;
+}
+/* Containerin sommittelua keskelle sivua/border */
+.container  {
+  margin-top:12%;
+  display:table;
+  margin-left:auto;
+  margin-right:auto;
+  border: 4px solid black;
+  border-radius:3%;
+}
+
+/* Listan sommittelua */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Listan ja kursorin stailaus  */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #f4faf2;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+/* Hiiren ollessa tehtävän päällä väri muuttuu */
+ul li:hover {
+  background: #7fed5a;
+}
+
+/* Yliviivaus ja värin muutos */
+ul li.checked {
+  background: #0034b0;
+  color: white;
+  text-decoration: line-through;
+}
+
+/* Checkmark klikatessa */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 7px;
+  transform: rotate(45deg);
+}
+
+/* Remove-napin tyylitys */
+.remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  cursor:cell;
+}
+/* Hover värimuutos */
+.remove:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Header-kustomointi */
+.header {
+  background-color: #1576fe;
+  padding: 40px 40px;
+  color: white;
+  text-align: center;
+}
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Syötekohdan tyylittely */
+input {
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 1.5em;
+}
+
+/* Plus-napin muokkaus/hover */
+.add {
+  padding: 12px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: cell;
+  transition: 0.4s;
+}
+.add:hover {
+  background-color: #7fed5a;
+}
